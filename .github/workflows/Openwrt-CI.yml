@@ -83,7 +83,7 @@ jobs:
           # 
 
           sed -i 's/^[ \t]*//g' ./.config
-          make defconfig
+          FORCE=1 make defconfig
 
       - name: Make download
         run: |
