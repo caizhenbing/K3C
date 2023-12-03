@@ -83,7 +83,7 @@ jobs:
           # 
 
           sed -i 's/^[ \t]*//g' ./.config
-          make k3cb1.config
+          make defconfig
 
       - name: Make download
         run: |
