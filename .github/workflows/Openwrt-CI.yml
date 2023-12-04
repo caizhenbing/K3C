@@ -76,6 +76,7 @@ jobs:
           CONFIG_TARGET_IMAGES_GZIP=y
           CONFIG_KERNEL_BUILD_USER="OpenWrt-CI"
           CONFIG_KERNEL_BUILD_DOMAIN="Azure"
+          FORCE=1
           EOF
 
           #
@@ -83,7 +84,7 @@ jobs:
           # 
 
           sed -i 's/^[ \t]*//g' ./.config
-          FORCE=1 make defconfig
+          make defconfig
 
       - name: Make download
         run: |
