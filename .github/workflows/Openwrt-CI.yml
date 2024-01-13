@@ -36,9 +36,6 @@ jobs:
         run: |
           git clone https://github.com/caizhenbing/K3C
           cd K3C
-          cd package/feeds/luci
-          ln -sf ../../../feeds/luci/collections/luci ./
-          cd ../../../
           rm .config
           cp k3cb1.config .config
           
